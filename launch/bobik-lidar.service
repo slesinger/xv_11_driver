@@ -1,0 +1,16 @@
+[Unit]
+Description="Bobik XV11 Lidar startup"
+
+[Service]
+User=ubuntu
+Group=ubuntu
+Environment="HOME=/home/ubuntu"
+Environment="LD_LIBRARY_PATH=/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib"
+Environment="PYTHONPATH=/opt/ros/foxy/lib/python3.8/site-packages"
+Environment="AMENT_PREFIX_PATH=/home/ubuntu/ros2_foxy/install/xv_11_driver:/home/ubuntu/ros2_foxy/install/bobik_driver:/opt/ros/foxy"
+
+ExecStart=/opt/ros/foxy/bin/ros2 run xv_11_driver xv_11_driver
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

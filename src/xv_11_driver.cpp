@@ -66,7 +66,7 @@
 // Here I assume you have setup symbolic link to your actual serial port tty driver to the lidar
 #define XV11_PORT_DEFAULT "/dev/ttyUSB0"           // Serial device driver name (sym link to real dev)
 #define XV11_BAUD_RATE_DEFAULT 115200              // Serial baud rate
-#define XV11_FRAME_ID_DEFAULT "neato_laser"        // frame_id in LaserScan messages
+#define XV11_FRAME_ID_DEFAULT "lidar_link"        // frame_id in LaserScan messages
 #define XV11_FIRMWARE_VERSION_DEFAULT 2            // XV-11 firmware rev. 1 is oldest
 
 
